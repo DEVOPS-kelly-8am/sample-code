@@ -1,11 +1,12 @@
+
 pipeline {
   agent any
   stages {
 
-    stage('first stage') {
+    stage('Stage 1') {
       steps {
         script {
-          echo $name
+          echo 'Stage 1'
         }
       }
     }
