@@ -5,22 +5,21 @@ pipeline {
         stage('Non-Parallel Stage') {
             steps {
                 echo 'This stage will be executed first.'
+                sleep 5
             }
         }
-        stage('Parallel Stage') {
+        stage('Branch A') {
+           steps {
+               echo "On Branch A"
+               sleep 5
+           }
         }
-                stage('Branch A') {
-                    steps {
-                        echo "On Branch A"
-                        sleep 5
-                    }
-                }
-                stage('Branch B') {
-                    steps {
-                        echo "On Branch B"
-                        sleep 5
-                    }
-                }
+        stage('Branch B') {
+           steps {
+              echo "On Branch B"
+              sleep 5
+           }
+        }
             
         
     }
