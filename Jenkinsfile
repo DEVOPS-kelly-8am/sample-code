@@ -10,7 +10,7 @@ pipeline {
         }
       }
     }
-
+    parallel {
     stage('Stage 2') {
       steps {
         script {
@@ -25,5 +25,6 @@ pipeline {
         }
       }
     }
-  }
+    }
+    }
 }
