@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('Parallel Stage') {
-            parallel {
+        }
                 stage('Branch A') {
                     steps {
                         echo "On Branch A"
@@ -21,7 +21,7 @@ pipeline {
                         sleep 5
                     }
                 }
-            }
+            
         }
     }
 }
