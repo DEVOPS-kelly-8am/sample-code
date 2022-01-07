@@ -1,30 +1,30 @@
-
 pipeline {
-  agent any
-  stages {
-
-    stage('Stage 1') {
-      steps {
-        script {
-          echo 'Stage 7'
+    agent any
+    
+    stages {
+        stage('Non-Parallel Stage') {
+            steps {
+                echo 'This stage will be executed first.'
+            }
         }
-      }
-    }
-    parallel {
-    stage('Stage 2') {
-      steps {
-        script {
-          echo 'Stage 8'
+        stage('Parallel Stage') {
+            when {
+                branch 'master'
+            }
+            parallel {
+                stage('Branch A') {
+                    steps {
+                        echo "On Branch A"
+                        sleep 5
+                    }
+                }
+                stage('Branch B') {
+                    steps {
+                        echo "On Branch B"
+                        sleep 5
+                    }
+                }
+            }
         }
-      }
-    }
-    stage('Stage 3') {
-      steps {
-        script {
-          echo 'Stage 9'
-        }
-      }
-    }
-    }
     }
 }
