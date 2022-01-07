@@ -6,7 +6,7 @@ pipeline {
     stage('Stage 1') {
       steps {
         script {
-          echo 'Stage 4'
+          echo 'Stage 7'
         }
       }
     }
@@ -14,14 +14,14 @@ pipeline {
     stage('Stage 2') {
       steps {
         script {
-          echo 'Stage 5'
+          echo 'Stage 8'
         }
       }
     }
     stage('Stage 3') {
       steps {
         script {
-          echo 'Stage 6'
+          echo 'Stage 9'
         }
       }
     }
