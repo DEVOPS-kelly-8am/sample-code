@@ -8,19 +8,20 @@ pipeline {
                 sleep 5
             }
         }
-        stage('Branch A') {
-           steps {
-               echo "On Branch A"
-               sleep 5
+        parallel {
+           stage('Branch A') {
+              steps {
+                  echo "On Branch A"
+                  sleep 5
+              }
            }
-        }
-        stage('Branch B') {
-           steps {
-              echo "On Branch B"
-              sleep 5
+           stage('Branch B') {
+              steps {
+                 echo "On Branch B"
+                 sleep 5
+              }
            }
-        }
-            
+        }    
         
     }
 }
