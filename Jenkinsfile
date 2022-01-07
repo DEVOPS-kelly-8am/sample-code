@@ -8,9 +8,6 @@ pipeline {
             }
         }
         stage('Parallel Stage') {
-            when {
-                branch 'parallel'
-            }
             parallel {
                 stage('Branch A') {
                     steps {
