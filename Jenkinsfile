@@ -8,6 +8,7 @@ pipeline {
                 sleep 5
             }
         }
+        stage ( 'parallel stage') {
         parallel {
            stage('Branch A') {
               steps {
@@ -22,6 +23,6 @@ pipeline {
               }
            }
         }    
-        
+       } 
     }
 }
