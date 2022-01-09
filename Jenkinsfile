@@ -6,25 +6,24 @@ pipeline {
     stage('Stage 1') {
       steps {
         script {
-          echo 'Stage 7'
+          echo 'Stage 10'
         }
       }
     }
-    parallel {
+
     stage('Stage 2') {
       steps {
         script {
-          echo 'Stage 8'
+          echo 'Stage 11'
         }
       }
     }
     stage('Stage 3') {
       steps {
         script {
-          echo 'Stage 9'
+          echo 'Stage 12'
         }
       }
     }
-    }
-    }
+  }
 }
